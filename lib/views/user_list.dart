@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:list_contacts/components/user_tile.dart';
 import 'package:list_contacts/routes/app_routes.dart';
 import 'package:provider/provider.dart';
-import '../models/user.dart';
 import '../provider/users.dart';
 
 class UserList extends StatelessWidget {
@@ -15,7 +14,7 @@ class UserList extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('My Contacts'),
-        actions: <Widget>[
+        actions: [
           IconButton(
             onPressed: () {
               Navigator.of(context).pushNamed(AppRoutes.USER_FORM);
